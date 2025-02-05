@@ -527,7 +527,7 @@ class Pyrenode(metaclass=Singleton):
         self.robot_connection = self._retry_until_success(
             robot_remote.Remote,
             func_kwargs={
-                'uri': f'http://0.0.0.0:{self.robot_port}'
+                'uri': f'http://localhost:{self.robot_port}'
             },
             timeout=timeout,
             retry_time=retry_time
